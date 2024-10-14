@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: blinker;
+    src: url('../public/Fonts/Blinker-Regular.ttf');
+}
+*{
+    font-family: blinker;
+}

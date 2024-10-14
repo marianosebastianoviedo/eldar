@@ -1,0 +1,28 @@
+<p-toast />
+<div style="display: flex; justify-content: center;height: 90vh; align-items: center;">
+    <form autocomplete="off" [formGroup]="loginForm" (ngSubmit)="login()">
+        <img src="eldar.png" width="200" alt="">
+        <div style="display: block; padding: 0.9rem;">
+            <input 
+            pInputText 
+            type="text" 
+            placeholder="Usuario" 
+            formControlName="user"
+             /> <br>
+             @if (userNoValido) {
+                 <small style="color: #9d0d0d;">Ingrese al menos 3 caracteres...</small>
+                }
+                </div>
+            <p-password 
+            placeholder="Contraseña" 
+            formControlName="pass" 
+            [toggleMask]="true" 
+            feedback="false" /> <br>
+            @if (passNoValido) {
+                <small style="color: #9d0d0d;">Contraseña debe ser de 3 o 4 caracteres...</small>
+               }
+        <div style="display: block; padding: 1rem;text-align: center;">
+            <p-button label="Entrar" type="ngSubmit" [disabled]="loginForm.invalid" />
+        </div>
+    </form>
+</div>
